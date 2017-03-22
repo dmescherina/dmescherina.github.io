@@ -1,6 +1,6 @@
 ### This is the post about
  
-## Extraordinary Least Squares
+# Extraordinary Least Squares
 
 ****
 
@@ -13,18 +13,19 @@ Everyone had to use a linear regression at one point or another during their wor
 #### Variables (features) selection
    If you get some data set from the real world to analyse then it would probably have a few variables that would be correlated between each other. Or a few too many variables in total, most of which might not add a tremendous amount of explanatory power to your model. One of the ways to deal with it is to choose a subset of the variables (aka features), but testing each combinatoin can get really tedious (or unfeasible after the number of variables gets too large). Luckily, there are a few algorithms that can help with this problem: 
    
-   __Leaps and bounds procedure (Furnival and Wilson, 1974)__
+   +__Leaps and bounds procedure (Furnival and Wilson, 1974)__
    makes this selection process feasible for the number of variables as large as 30 or 40
 
   
-   __Forward- stepwise selection__
+   +__Forward- stepwise selection__
    starts with the intercept, and then sequentially adds into the model the predictor that most improves the fit
 
 
-   __Backward-stepwise selection__
+   +__Backward-stepwise selection__
    starts with the full model, and sequentially deletes the predictor that has the least impact on the fit
-   __Hybrid stepwise-selection__
+   
+   +__Hybrid stepwise-selection__
    strategies that consider both forward and backward moves at each step, and select the “best” of the two (the _step_ function in    R)
    
 #### Penalty functions
-    Another way to 
+   Another way to 
