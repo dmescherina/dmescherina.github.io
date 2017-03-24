@@ -34,7 +34,7 @@ Everyone had to use a linear regression at one point or another during their wor
 
 > The figure below shows the simulation of methods above on a sample dataset
 
-    ![](post1fig1.png)
+   ![](post1fig1.png)
    
 ### Penalty functions aka Shrinkage
    Another way to improve your model and reduce its variance with a small bias increase trade-off is to minimise not just the residual sum of squares, but also add the constraint for the sum of parameter values. There are a few ways to do this:
@@ -47,11 +47,11 @@ Everyone had to use a linear regression at one point or another during their wor
    penalises using the sum of the absolute values of parameters (comparing to squares in Ridge). As a result, the larger your lambda *(alpha)*, the more are the chances that some of the features will be completely excluded from the regression and their coefficients would be set to zero (in contrast to Ridge that gradually brings all coefficients to zero proportionately)
 
 
-   We can visualise the difference between Ridge and Lasso as the minimisation problem based on the example of 2 coefficient parameters beta1 and beta2. The subset of optimal solutions for coefficients with Ridge penalty function is the circle, whereas for Lasso it's a rhomboid. The solution occurs when beta options from regression estimation are touching the outer bound of the penalty restriction subset
+       We can visualise the difference between Ridge and Lasso as the minimisation problem based on the example of 2 coefficient parameters beta1 and beta2. The subset of optimal solutions for coefficients with Ridge penalty function is the circle, whereas for Lasso it's a rhomboid. The solution occurs when beta options from regression estimation are touching the outer bound of the penalty restriction subset
    
    > From this illustration we cn see that Lasso is more likely to get a "corner" solution with one of the betas being zero than the Ridge:
    
-       ![](post1fig2.png)
+   ![](post1fig2.png)
    
 
    + __*Elastic Net*__
