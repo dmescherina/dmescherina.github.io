@@ -74,8 +74,9 @@ Everyone had to use a linear regression at one point or another during their wor
    ![](post1fig4.png)
 
 ### Bonus!
-   A few more illustrations of how Ridge, Lasso and Elsatic Net affect the coefficients compared to simple Linear Regression (based on the wine quality data set that can be found [here])
-   [here]:http://www3.dsi.uminho.pt/pcortez/wine/
+   A few more illustrations of how Ridge, Lasso and Elsatic Net affect the coefficients compared to simple Linear Regression (based on the wine quality data set that can be found [here] )
+   
+[here]:http://www3.dsi.uminho.pt/pcortez/wine/
    
    > Ridge smoothly decreases coefficients to almost zero at the extreme levels of penalty function
    
