@@ -28,8 +28,17 @@ Everyone had to use a linear regression at one point or another during their wor
    strategies that consider both forward and backward moves at each step, and select the “best” of the two (the _step_ function in    R)
    
    + __*Forward-stagewise regression*__  is even more constrained than forward-stepwise above. It starts like forward-stepwise regression, with an intercept equal to the mean, and then at each step the algorithm identifies the variable most correlated with the current residua, then computes the simple linear regression coefficient of the residual on this chosen variable, and then adds it to the current coefficient for that variable. This is continued till none of the variables have correlation with the residuals. *Although this is the slower algorythm than the other options (it takes more time to arrive at the same optimal solution) it is nevertheless pretty handy in higher dimensions problems*
-   
-![](assets/post1file1.png)
+
+****
+
+> The figure below shows the simulation of methods above on a sample dataset
+
+![](post1fig1.png)
    
 ### Penalty functions
    Another way to 
+
+
+
+> The source of the beautiful graphs and all the extraordinary information in this post is the book
+> __"The Elements of Statistical Learning"__, *Trevor Hastie, Jerome H. Friedman, Robert Tibshirani*, February 2009
