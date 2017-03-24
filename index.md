@@ -73,6 +73,26 @@ Everyone had to use a linear regression at one point or another during their wor
    
    ![](post1fig4.png)
 
+### Bonus!
+   A few more illustrations of how Ridge, Lasso and Elsatic Net affect the coefficients compared to simple Linear Regression (based on the wine quality data set that can be found [here])
+   [here]:http://www3.dsi.uminho.pt/pcortez/wine/
+   
+   > Ridge smoothly decreases coefficients to almost zero at the extreme levels of penalty function
+   
+   ![](ridge.png)
+   
+   > Lasso has a more kinky variable path and ends up with a lot of coefficients zeroed out
+   
+   ![](lasso.png)
+   
+   > Elsatic Net is a combination of both Ridge and Lasso and would have properties depending on the weight you put on Ridge and Lasso elements of its penalty function (below example is 90% Ridge 10% Lasso):
+   
+   ![](elastic.png)
+   
+
+****
+
+
 
 > The source of the beautiful graphs and all the extraordinary information in this post is the book
 > __"The Elements of Statistical Learning"__, *Trevor Hastie, Jerome H. Friedman, Robert Tibshirani*, February 2009
