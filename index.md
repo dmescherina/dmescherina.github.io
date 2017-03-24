@@ -66,7 +66,12 @@ Everyone had to use a linear regression at one point or another during their wor
  
  ![](post1fig3.png)
    
-
+   + __*Principle Components Regression (PCR)*__
+   allows to transform a large subset of potentially highly correlated features into a smaller set of completely uncorrelated variables by performing an eigendecompoition on the set of variables and then using these orthogonal new variables in the regression in place of original features. The additional bonus of this method is that as a result of this orthogonal decomposition, be design first principal component has the largest variance and the last principal component has the smallest variance. The coefficients of components with smallest variance are then penalised more than the coefficients of principal components with largest variance. The similar logic is also built into Ridge regression.
+   
+   > As a result the shrinkage affects the most the coefficients of variables with the smallest variance, which makes sense because since we don't expect much variation in the data along the direction of this principal component its coefficient might as well be reduced to decrease the variance of the model
+   
+   ![](post1fig4.png)
 
 
 > The source of the beautiful graphs and all the extraordinary information in this post is the book
