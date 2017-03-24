@@ -33,7 +33,8 @@ Everyone had to use a linear regression at one point or another during their wor
 
  > The figure below shows the simulation of methods above on a sample dataset
 
-   ![](post1fig1.png)
+   ![](assets/post1/post1fig1.png)
+
 
 ### Penalty functions aka Shrinkage
    Another way to improve your model and reduce its variance with a small bias increase trade-off is to minimise not just the residual sum of squares, but also add the constraint for the sum of parameter values. There are a few ways to do this:
@@ -41,7 +42,7 @@ Everyone had to use a linear regression at one point or another during their wor
    + __*Ridge*__
    adds the penalty based on sum of squares of the coefficients estimates. The severity of this penalty is regulated by the parameter lambda *(which is referred to as alpha in Python scikit library)*: the bigger the parameter, the closer all coefficients are being gradually and smoothly shrunk to zero
 
-  
+
    + __*Lasso*__
    penalises using the sum of the absolute values of parameters (comparing to squares in Ridge). As a result, the larger your lambda *(alpha)*, the more are the chances that some of the features will be completely excluded from the regression and their coefficients would be set to zero (in contrast to Ridge that gradually brings all coefficients to zero proportionately)
 
@@ -50,7 +51,7 @@ Everyone had to use a linear regression at one point or another during their wor
 
    > From this illustration we can see that Lasso is more likely than Ridge to get a "corner" solution with one of the betas being zero:
 
-   ![](post1fig2.png)
+   ![](assets/post1/post1fig2.png)
 
 
    + __*Elastic Net*__
@@ -64,14 +65,16 @@ Everyone had to use a linear regression at one point or another during their wor
 
  > We can see that evolution of coefficients in case of LAR and Lasso is very similar except for when a coefficient's value approaches zero. In that case it's dropped out of Lasso estimation but continues smoothly in the case of LAR
 
- ![](post1fig3.png)
+ ![](assets/post1/post1fig3.png)
 
    + __*Principle Components Regression (PCR)*__
    allows to transform a large subset of potentially highly correlated features into a smaller set of completely uncorrelated variables by performing an eigen decomposition on the set of variables and then using these orthogonal new variables in the regression in place of original features. The additional bonus of this method is that as a result of this orthogonal decomposition, be design first principal component has the largest variance and the last principal component has the smallest variance. The coefficients of components with smallest variance are then penalised more than the coefficients of principal components with largest variance. The similar logic is also built into Ridge regression.
 
    > As a result the shrinkage affects the most the coefficients of variables with the smallest variance, which makes sense because since we don't expect much variation in the data along the direction of this principal component its coefficient might as well be reduced to decrease the variance of the model
 
-   ![](post1fig4.png)
+
+   ![](assets/post1/post1fig4.png)
+
 
 ### Bonus!
    A few more illustrations of how Ridge, Lasso and Elastic Net affect the coefficients compared to simple Linear Regression (based on the wine quality data set that can be found [here] )
@@ -80,16 +83,16 @@ Everyone had to use a linear regression at one point or another during their wor
 
    > Ridge smoothly decreases coefficients to almost zero at the extreme levels of penalty function
 
-   ![](ridge.png)
+   ![](assets/post1/ridge.png)
 
    > Lasso has a more kinky variable path and ends up with a lot of coefficients zeroed out
 
-   ![](lasso.png)
+   ![](assets/post1/lasso.png)
 
    > Elastic Net is a combination of both Ridge and Lasso and would have properties depending on the weight you put on Ridge and Lasso elements of its penalty function (below example is 90% Ridge 10% Lasso):
 
-   ![](elastic.png)
-
+   ![](assets/post1/elastic.png)
+   
 
 ****
 
