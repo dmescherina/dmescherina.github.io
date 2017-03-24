@@ -37,8 +37,22 @@ Everyone had to use a linear regression at one point or another during their wor
 
 ![](post1fig1.png)
    
-### Penalty functions
-   Another way to 
+### Penalty functions aka Shrinkage
+   Another way to improve your model and reduce its variance with a small bias increase trade-off is to minimise not just the residual sum of squares, but also add the constraint for the sum of parameter values. There are a few ways to do this:
+   
+   + __*Ridge*__
+   adds the penalty based on sum of squares of the coefficients estimates. The severity of this penalty is regulated by the parameter lambda *(which is refered to as alpha in Python scikit library)*: the bigger the parameter, the closer all coefficients are being gradually and smoothly shrunk to zero 
+
+  
+   + __*Lasso*__
+   penalises using the sum of the absolute values of parameters (comparing to squares in Ridge). As a result, the larger your lambda *(alpha)*, the more are the chances that some of the features will be completely excluded from the regression and would be set to zero
+
+
+   + __*Elastic Net*__
+   is the hybrid between Ridge and Lasso
+   
+   + __*Least Angle Regression (LAR)*__
+   is a version of Lasso algorithm
 
 
 
