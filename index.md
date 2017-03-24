@@ -47,7 +47,7 @@ Everyone had to use a linear regression at one point or another during their wor
    penalises using the sum of the absolute values of parameters (comparing to squares in Ridge). As a result, the larger your lambda *(alpha)*, the more are the chances that some of the features will be completely excluded from the regression and their coefficients would be set to zero (in contrast to Ridge that gradually brings all coefficients to zero proportionately)
 
 
-  `We can visualise the difference between Ridge and Lasso as the minimisation problem based on the example of 2 coefficient parameters beta1 and beta2. The subset of optimal solutions for coefficients with Ridge penalty function is the circle, whereas for Lasso it's a rhomboid. The solution occurs when beta options from regression estimation are touching the outer bound of the penalty restriction subset`
+  We can visualise the difference between Ridge and Lasso as the minimisation problem based on the example of 2 coefficient parameters beta1 and beta2. The subset of optimal solutions for coefficients with Ridge penalty function is the circle, whereas for Lasso it's a rhomboid. The solution occurs when beta options from regression estimation are touching the outer bound of the penalty restriction subset
 
    > From this illustration we can see that Lasso is more likely than Ridge to get a "corner" solution with one of the betas being zero:
 
@@ -92,7 +92,7 @@ Everyone had to use a linear regression at one point or another during their wor
    > Elastic Net is a combination of both Ridge and Lasso and would have properties depending on the weight you put on Ridge and Lasso elements of its penalty function (below example is 90% Ridge 10% Lasso):
 
    ![](assets/post1/elastic.png)
-   
+
 
 ****
 
