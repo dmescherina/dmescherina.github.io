@@ -45,14 +45,14 @@ Everyone had to use a linear regression at one point or another during their wor
 
   
    + __*Lasso*__
-   penalises using the sum of the absolute values of parameters (comparing to squares in Ridge). As a result, the larger your lambda *(alpha)*, the more are the chances that some of the features will be completely excluded from the regression and would be set to zero
+   penalises using the sum of the absolute values of parameters (comparing to squares in Ridge). As a result, the larger your lambda *(alpha)*, the more are the chances that some of the features will be completely excluded from the regression and their coefficients would be set to zero (in contrast to Ridge that gradually brings all coefficients to zero proportionately)
 
 
    + __*Elastic Net*__
-   is the hybrid between Ridge and Lasso
+   is the hybrid between Ridge and Lasso. If we generalise the penalty function as a sum of absolute values of coefficients to the power of q, with q=1 we get Lasso and with q=2 we get Ridge. Elastic Net covers the cases in between the two (in fact its formula for the penalty function is the weighted sum of Ridge and Lasso penalties)
    
    + __*Least Angle Regression (LAR)*__
-   is a version of Lasso algorithm
+   is a version of stepwise forward regression above and also gives similar results to the Lasso algorithm. The main difference with the latter is that LAR doesn't drop the variables when their coefficient approaches zero
 
 
 
