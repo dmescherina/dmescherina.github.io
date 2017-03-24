@@ -31,7 +31,7 @@ Everyone had to use a linear regression at one point or another during their wor
    + __*Forward-stagewise regression*__  is even more constrained than forward-stepwise above. It starts like forward-stepwise regression, with an intercept equal to the mean, and then at each step the algorithm identifies the variable most correlated with the current residua, then computes the simple linear regression coefficient of the residual on this chosen variable, and then adds it to the current coefficient for that variable. This is continued till none of the variables have correlation with the residuals. *Although this is the slower algorythm than the other options (it takes more time to arrive at the same optimal solution) it is nevertheless pretty handy in higher dimensions problems*
 
 
-> The figure below shows the simulation of methods above on a sample dataset
+ > The figure below shows the simulation of methods above on a sample dataset
 
    ![](post1fig1.png)
    
@@ -57,7 +57,15 @@ Everyone had to use a linear regression at one point or another during their wor
    is the hybrid between Ridge and Lasso. If we generalise the penalty function as a sum of absolute values of coefficients to the power of q, with q=1 we get Lasso and with q=2 we get Ridge. Elastic Net covers the cases in between the two (in fact its formula for the penalty function is the weighted sum of Ridge and Lasso penalties)
    
    + __*Least Angle Regression (LAR)*__
-   is a version of stepwise forward regression above and also gives similar results to the Lasso algorithm. The main difference with the latter is that LAR doesn't drop the variables when their coefficient approaches zero
+   is a version of stepwise forward regression above and also gives similar results to the Lasso algorithm. 
+   Forward stepwise regression builds a model sequentially, adding one variable at a time. At each step, it identifies the best variable to include in the active set, and then updates the least squares fit to include all the active variables.
+ Least angle regression uses a similar strategy, but only enters “as much” of a predictor as it deserves. At the first step it identifies the variable most correlated with the response. Rather than fit this variable completely, LAR moves the coefficient of this variable continuously toward its least-squares value causing its correlation with the evolving residual to decrease in absolute value, and as soon as another variable “catches up” in terms of correlation with the residual, the process is paused. The second variable then joins the active set, and their coefficients are moved together in a way that keeps their correlations tied and decreasing. This process is continued until all the variables are in the model.
+ The main difference between LAR and Lasso is that LAR doesn't drop the variables when their coefficient approach zero, whereas Lasso does
+ 
+ > We can see that evolution of coefficients in case of LAR and Lasso is very similar except for when a coefficient's value approaches zero. In that case it's dropped out of Lasso estimation but continues smoothly in the case of LAR
+ 
+ ![](post1fig3.png)
+   
 
 
 
