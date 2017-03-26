@@ -1,5 +1,7 @@
 <style>
+body {
 background-color: white !important;
+}
 </style>
 > March 24, 2017
 
