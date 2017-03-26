@@ -1,3 +1,6 @@
+<style>
+background-color: white !important;
+</style>
 > March 24, 2017
 
 ### This is the post about
