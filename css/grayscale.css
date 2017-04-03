@@ -69,7 +69,8 @@ a:focus {
   outline: none;
 }
 .navbar-custom .navbar-brand {
-  font-weight: 700;
+  font-weight: 0;
+  visibility: hidden;
 }
 .navbar-custom .navbar-brand:focus {
   outline: none;
