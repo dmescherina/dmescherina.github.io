@@ -26,8 +26,8 @@ On the other hand, the discriminant analysis has become one of the fundamental c
 ****
 
 * In short, __*Linear discriminant analysis (LDA)*__ solves the classification problem by maximising the distance between the means of the two classes. The original problem that Fisher posed was the following:
-        > Find the linear combination Z = (a)^T*X such that the between-
-        class variance is maximised relative to the within-class variance
+  > Find the linear combination Z = (a)^T*X such that the between-
+    class variance is maximised relative to the within-class variance
 
   meaning that the class subsets must be spread out as much as possible in terms of variance, which is not dissimilar to finding principal component subspaces of the classes. As a result the boundary separating the classes would minimise the overlap between them:
 
@@ -61,11 +61,12 @@ As this method is repeated at each point and as the direction of the linear disc
 
 ![](assets/post2/dann2.png)
 
-* A lot of the tricks above are actually generalised by the __*support vector machines (SVM)*__ algorithm. SVM is the generalisation of the Optimally Separating Hyperplane(OSH) algorithms.
+* __*Support vector machines (SVM)*__ algorithm is the generalisation of the Optimally Separating Hyperplane (OSH) algorithms with a more Computer Science flavour than the discriminant analysis classification methods. Although some of the tricks of more classic methods above are present in SVM, there are actually more differences than similarities:  
+  + SVM doesn't make any assumptions about the distribution of the underlying data (unlike LDA and QDA)
   + Similar to the LDA, SVM maximises the distance between the decision boundary and the observations, however unlike LDA SVM only uses nearest points to the boundary (whereas LDA takes into account all the observations)
   + SVM is also more flexible for finding the decision boundaries using the kernel trick to find a hyperplane in higher dimensions that allows to linearly separate the data that can't be linearly separated in the lower dimension.
   + SVM is also often used in conjunction with the hinge loss function and thus is more flexible in cases when the data is not linearly separable and allows for a solution with some of the points misclassified
-  + SVM doesn't make any assumptions about the distribution of the underlying data (unlike LDA and QDA)
+
 
 
   > The source of the beautiful graphs and all the extraordinary information in this post is the book
